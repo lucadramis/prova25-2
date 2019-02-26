@@ -26,5 +26,5 @@ function myFunction() {
   // log response or catch error of fetch promise
   fetchAsync()
       .then(data => console.log(data.data[0].first_name))
-      .then(data.data[0].first_name = document.getElementById("fetch"))
+      .then(data.data[0].first_name => document.getElementById("fetch").innerHTML)
       //.catch(reason => console.log(reason.message))
