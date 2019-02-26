@@ -15,7 +15,7 @@ function myFunction() {
   }
   async function fetchAsync () {
     // await response of fetch call
-    let response = await fetch('https://reqres.in/api/users?page=2');
+    let response = await fetch('https://reqres.in/api/users/');
     // only proceed once promise is resolved
     let res = await response.json();
     // only proceed once second promise is resolved
@@ -48,3 +48,28 @@ function myFunction() {
         
       }
     })
+    function printTime() {
+      const now = new Date()
+      const formatteDate = now.getHours() + ":" +
+          now.getMinutes() + ":" + now.getSeconds()
+      //const orologioDiv = document.getElementById("orologio")
+      /*riga aggiunta test
+      const minutiDiv = document.getElementById("minuti")*/
+      const hours = now.getHours() + ":"
+      const minutes = now.getMinutes() + ":"
+      const seconds = now.getSeconds()
+      
+      //orologioDiv.innerHTML = formatteDate  
+      const ore = document.getElementById("ore")
+      ore.innerHTML = hours
+      const minuti = document.getElementById("minuti")  
+      minuti.innerHTML = minutes
+      const secondi = document.getElementById("secondi")  
+      secondi.innerHTML = seconds
+  
+      //console.log(formatteDate)
+  
+  }
+  
+  setInterval(printTime, 1000)
+  

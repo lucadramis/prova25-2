@@ -1,5 +1,9 @@
 .navbar {
-    justify-content:flex-end !important;
+    
+    height: 100px;
+    background-color: black;
+    
+    
 }
 
 .news-center {
@@ -40,5 +44,26 @@
 #prova > div {
     margin:45px;
     background-color: aquamarine;
+    
+}
+#orolog{
+    padding: 5px;
+    width: 100px;
+    margin: 50px;
+}
+#ore {
+    color:grey;
+    font-size: 20px;
+    float: left;
+    
+}#minuti {
+    color:grey;
+    float: left;
+    font-size: 20px;
+     
+}#secondi {
+    color:grey;
+    font-size: 20px;
+   
     
 }
