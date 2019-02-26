@@ -1,0 +1,14 @@
+.navcont {
+    background-color:rgb(136, 132, 132) !important;
+    padding:20px;
+}
+
+.news-center {
+    text-align: center;
+    padding: 25px ;
+}
+a {
+    text-align: right;
+}
+
+#more {display: none;}
