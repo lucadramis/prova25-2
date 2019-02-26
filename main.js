@@ -17,14 +17,34 @@ function myFunction() {
     // await response of fetch call
     let response = await fetch('https://reqres.in/api/users?page=2');
     // only proceed once promise is resolved
-    let data = await response.json();
+    let res = await response.json();
     // only proceed once second promise is resolved
-    return data;
+    return res;
   } 
   
   // trigger async function
   // log response or catch error of fetch promise
   fetchAsync()
-      .then(data => console.log(data.data[0].first_name))
-      .then(data.data[0].first_name => document.getElementById("fetch").innerHTML)
+      //.then(data => console.log(data.data[0].first_name))
+      
       //.catch(reason => console.log(reason.message))
+      .then(res => {
+        //console.log(res.data.lenght)
+      for(let i of res.data){
+        let div = document.createElement("div")
+        
+        let divnode = document.createTextNode("Nome: " + i.first_name + " " )
+        let elem = document.createElement("img")
+        let divnode1 = document.createTextNode("Cognome: "+ i.last_name +" "  )
+         
+        elem.setAttribute("src", i.avatar)
+        div.appendChild(divnode)
+        div.appendChild(divnode1)
+        div.appendChild(elem)        
+        document.getElementById("prova").appendChild(div)
+            
+        const element = document.querySelector('div');
+        element.classList.add('row');
+        
+      }
+    })

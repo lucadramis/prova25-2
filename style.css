@@ -1,14 +1,44 @@
-.navcont {
-    background-color:rgb(136, 132, 132) !important;
-    padding:20px;
+.navbar {
+    justify-content:flex-end !important;
 }
 
 .news-center {
     text-align: center;
     padding: 25px ;
-}
-a {
-    text-align: right;
+    margin:0 auto;
 }
 
+@media screen and (max-width: 600px) {
+    .news-center {
+      background-color: chartreuse;
+    }
+    
+  }
+  .link{
+      font-size: 25px;
+  }
+
 #more {display: none;}
+#footer{
+    padding:15px;
+    background-color: azure;
+    font-size: 25px;
+
+}
+#name{
+    float:right;
+    
+}
+#prova {
+  margin:10px;
+    display:flex;
+    flex-direction:row ;
+    
+    
+    
+}
+#prova > div {
+    margin:45px;
+    background-color: aquamarine;
+    
+}
