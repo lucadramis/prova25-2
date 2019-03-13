@@ -1,3 +1,24 @@
+function printTime() {
+  const now = new Date()
+  const formatteDate = now.getHours() + ":" +
+      now.getMinutes() + ":" + now.getSeconds()
+  const hours = now.getHours() + ":"
+  const minutes = now.getMinutes() + ":"
+  const seconds = now.getSeconds()
+  
+  //orologioDiv.innerHTML = formatteDate  
+  const ore = document.getElementById("ore")
+  ore.innerHTML = hours
+  const minuti = document.getElementById("minuti")  
+  minuti.innerHTML = minutes
+  const secondi = document.getElementById("secondi")  
+  secondi.innerHTML = seconds
+
+  //console.log(formatteDate)
+}
+
+setInterval(printTime, 1000)
+
 function myFunction() {
     var dots = document.getElementById("dots");
     var moreText = document.getElementById("more");
@@ -32,6 +53,7 @@ function myFunction() {
         //console.log(res.data.lenght)
       for(let i of res.data){
         let div = document.createElement("div")
+        div.classList.add("row", "col-4")
         
         let divnode = document.createTextNode("Nome: " + i.first_name + " " )
         let elem = document.createElement("img")
@@ -41,35 +63,15 @@ function myFunction() {
         div.appendChild(divnode)
         div.appendChild(divnode1)
         div.appendChild(elem)        
-        document.getElementById("prova").appendChild(div)
+        document.getElementById("news").appendChild(div)
             
-        const element = document.querySelector('div');
-        element.classList.add('row');
+        
+        
         
       }
     })
-    function printTime() {
-      const now = new Date()
-      const formatteDate = now.getHours() + ":" +
-          now.getMinutes() + ":" + now.getSeconds()
-      //const orologioDiv = document.getElementById("orologio")
-      /*riga aggiunta test
-      const minutiDiv = document.getElementById("minuti")*/
-      const hours = now.getHours() + ":"
-      const minutes = now.getMinutes() + ":"
-      const seconds = now.getSeconds()
-      
-      //orologioDiv.innerHTML = formatteDate  
-      const ore = document.getElementById("ore")
-      ore.innerHTML = hours
-      const minuti = document.getElementById("minuti")  
-      minuti.innerHTML = minutes
-      const secondi = document.getElementById("secondi")  
-      secondi.innerHTML = seconds
-  
-      //console.log(formatteDate)
-  
-  }
-  
-  setInterval(printTime, 1000)
+    var ora = new Date();
+    document.getElementById("ora").innerHTML = "Prima prova sommatoria del " 
+    + ora.getDate() + "/" + (ora.getMonth() + 1) + "/" + ora.getFullYear();
+    
   

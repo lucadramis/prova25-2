@@ -30,40 +30,29 @@
 
 }
 #name{
-    float:right;
+    float: right;;
     
 }
-#prova {
-  margin:10px;
+#news {
+    text-align: center;
+    margin:25px;
     display:flex;
     flex-direction:row ;
     
     
     
 }
-#prova > div {
-    margin:45px;
-    background-color: aquamarine;
+.row {
+    padding: 10px;
+    width: 40% ;
+   background-color: aquamarine;
+
     
 }
-#orolog{
-    padding: 5px;
-    width: 100px;
-    margin: 50px;
-}
-#ore {
+
+#ore, #minuti, #secondi {
     color:grey;
     font-size: 20px;
     float: left;
-    
-}#minuti {
-    color:grey;
-    float: left;
-    font-size: 20px;
-     
-}#secondi {
-    color:grey;
-    font-size: 20px;
-   
     
 }
